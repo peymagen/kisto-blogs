@@ -1,0 +1,332 @@
+/* ================================
+   Base / Reset
+================================ */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #111;
+    background: #fff;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+.wrap {
+    width: min(760px, 100%);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ================================
+   Reading Progress Bar
+================================ */
+.progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    width: 0;
+    height: 3px;
+    background: #111;
+    transition: width 0.05s linear;
+}
+
+/* ================================
+   Header
+================================ */
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 88px;
+    border-bottom: 1px solid #eee;
+}
+
+.top a {
+    color: #555;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+/* ================================
+   Blog Home
+================================ */
+.blog-home {
+    padding: 70px 0;
+}
+
+/* Wider homepage layout to match the reference design.
+   Article pages keep the original narrow .wrap width. */
+.blog-home > .wrap {
+    width: min(1440px, 100%);
+    padding: 0 20px;
+}
+
+.intro {
+    margin-bottom: 58px;
+    text-align: center;
+}
+
+.intro p {
+    margin: 0 0 12px;
+    color: #777;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.intro h1 {
+    margin: 0;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -2px;
+}
+
+.intro .sub {
+    max-width: 900px;
+    margin: 20px auto 0;
+    color: #666;
+    font-size: 17px;
+    line-height: 1.65;
+}
+
+/* ================================
+   Article Cards
+================================ */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 54px 36px;
+}
+
+.blog-image,
+.hero-image {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.blog-image {
+    height: 365px;
+}
+
+.hero-image {
+    height: 430px;
+    margin-bottom: 40px;
+}
+
+.card img,
+.fakeimg {
+    width: 100%;
+    height: 365px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.fakeimg {
+    display: flex;
+    align-items: flex-end;
+    padding: 22px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #263238, #a77c45);
+}
+
+.g2 { background: linear-gradient(135deg, #1f343a, #80927d); }
+.g3 { background: linear-gradient(135deg, #3a3027, #bd966d); }
+.g4 { background: linear-gradient(135deg, #233a55, #8797a8); }
+.g5 { background: linear-gradient(135deg, #473b30, #d0ae82); }
+.g6 { background: linear-gradient(135deg, #29343e, #96744e); }
+.g7 { background: linear-gradient(135deg, #34434a, #a39b85); }
+.g8 { background: linear-gradient(135deg, #302f39, #aa8765); }
+.g9 { background: linear-gradient(135deg, #1e3b46, #749da2); }
+.g10 { background: linear-gradient(135deg, #3b322d, #9d775b); }
+
+.date {
+    margin-top: 16px;
+    color: #888;
+    font-size: 16px;
+}
+
+.card h2 {
+    margin: 8px 0 14px;
+    font-size: 29px;
+    line-height: 1.18;
+}
+
+.card p {
+    margin: 0 0 16px;
+    color: #777;
+    font-size: 18px;
+    line-height: 1.55;
+}
+
+.read {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.card a:hover,
+.back:hover,
+.next a:hover {
+    text-decoration: underline;
+}
+
+/* ================================
+   Article Page
+================================ */
+.article {
+    padding: 70px 0;
+}
+
+.article .label {
+    color: #777;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.article h1 {
+    margin: 15px 0 25px;
+    font-size: 50px;
+    line-height: 1.08;
+    letter-spacing: -2px;
+}
+
+.heroimg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 430px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #263238, #a77c45);
+}
+
+.article h2 {
+    margin-top: 38px;
+    font-size: 28px;
+}
+
+.article h3 {
+    margin-top: 28px;
+    font-size: 20px;
+}
+
+.article p,
+.article li {
+    color: #555;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* ================================
+   FAQ
+================================ */
+.faq {
+    margin-top: 45px;
+    border-top: 1px solid #ddd;
+}
+
+.faq details {
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.faq summary {
+    cursor: pointer;
+    font-weight: 700;
+}
+
+/* ================================
+   Share Buttons
+================================ */
+.share {
+    display: flex;
+    gap: 10px;
+    margin-top: 40px;
+    padding-top: 25px;
+    border-top: 1px solid #ddd;
+}
+
+.share button {
+    padding: 9px 15px;
+    border: 1px solid #ddd;
+    background: #fff;
+    cursor: pointer;
+}
+
+.share button:hover {
+    background: #f7f7f7;
+}
+
+.next {
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px solid #ddd;
+    font-weight: 700;
+}
+
+.back {
+    display: inline-block;
+    margin-top: 35px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* ================================
+   Responsive Design
+================================ */
+@media (max-width: 700px) {
+    .wrap {
+        padding: 0 18px;
+    }
+
+    .intro h1,
+    .article h1 {
+        font-size: 38px;
+    }
+
+    .blog-home > .wrap {
+        width: 100%;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .card img,
+    .fakeimg {
+        height: 220px;
+    }
+
+    .heroimg {
+        height: 280px;
+    }
+
+    .top {
+        height: 70px;
+    }
+}
